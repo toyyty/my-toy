@@ -543,6 +543,41 @@ toyger cat nz price, toyger cat breeder near me, toyger kittens for sale ny, toy
                 });
             });
         });
+
+        // Testimonial Carousel
+        const container = document.getElementById('testimonials-container');
+        const prevBtn = document.getElementById('prev-testimonial');
+        const nextBtn = document.getElementById('next-testimonial');
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        
+        let currentIndex = 0;
+        
+        function updateCarousel() {
+            const testimonialWidth = testimonials[0].offsetWidth;
+            const gap = 24; // 6 * 4 (gap-6 = 1.5rem = 24px)
+            const scrollPosition = (testimonialWidth + gap) * currentIndex;
+            container.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+        }
+        
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < testimonials.length - 1) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+        
+        // Handle window resize
+        window.addEventListener('resize', updateCarousel);
     </script>
 </body>
 </html>

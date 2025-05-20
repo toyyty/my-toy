@@ -37,7 +37,7 @@ toyger cat nz price, toyger cat breeder near me, toyger kittens for sale ny, toy
         .hero {
             background-image: linear-gradient(rgba(55, 58, 70, 0.7)),url('image/background.webp');
             background-size: cover;
-            background-position: left center;
+            background-position: center;
         }
         input:focus {
             outline: none;
@@ -106,7 +106,7 @@ toyger cat nz price, toyger cat breeder near me, toyger kittens for sale ny, toy
                 <h1 class="text-4xl md:text-5xl lg:text-6xl text-white font-bold mb-2 leading-tight">CHRISTA TOYGERS</h1>
                 <p class="text-md md:text-md text-white text-gray-700 mb-8">Discover the enchanting world of Toyger cats - the domestic breed that captures the wild beauty of tigers in a loving, family-friendly environment.</p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="about.html" class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-amber-600 transition-colors text-center whitespace-nowrap">Learn More...</a>
+                    <a href="about.html" class="text-white border border-white px-6 py-3 !rounded-button font-semibold whitespace-nowrap hover:bg-amber-600 transition-colors">Learn More...</a>
                 </div>
             </div>
         </div>
@@ -671,100 +671,7 @@ toyger cat nz price, toyger cat breeder near me, toyger kittens for sale ny, toy
             });
         });
     </script>
-
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Menu Toggle
-            const menuButton = document.querySelector('button.md\\:hidden');
-            const mobileNav = document.querySelector('nav.md\\:hidden');
-            
-            menuButton.addEventListener('click', function() {
-                mobileNav.classList.toggle('hidden');
-                
-                // Toggle icon between menu and close
-                const icon = menuButton.querySelector('i');
-                if (icon.classList.contains('ri-menu-line')) {
-                    icon.classList.remove('ri-menu-line');
-                    icon.classList.add('ri-close-line');
-                } else {
-                    icon.classList.remove('ri-close-line');
-                    icon.classList.add('ri-menu-line');
-                }
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // Care Guide Tabs
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-            
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    tabButtons.forEach(btn => btn.classList.remove('tab-active'));
-                    
-                    // Add active class to clicked button
-                    button.classList.add('tab-active');
-                    
-                    // Hide all tab contents
-                    tabContents.forEach(content => content.classList.add('hidden'));
-                    
-                    // Show the selected tab content
-                    const tabId = button.getAttribute('data-tab');
-                    document.getElementById(`${tabId}-content`).classList.remove('hidden');
-                });
-            });
-        });
-        document.addEventListener('DOMContentLoaded', function() {
-            // FAQ Accordion
-            const faqQuestions = document.querySelectorAll('.faq-question');
-            
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', () => {
-                    const answer = question.nextElementSibling;
-                    const icon = question.querySelector('i');
-                    
-                    // Toggle answer visibility
-                    answer.classList.toggle('hidden');
-                    
-                    // Toggle icon
-                    if (icon.classList.contains('ri-add-line')) {
-                        icon.classList.remove('ri-add-line');
-                        icon.classList.add('ri-subtract-line');
-                    } else {
-                        icon.classList.remove('ri-subtract-line');
-                        icon.classList.add('ri-add-line');
-                    }
-                });
-            });
-        });
-    </script>
-     
-     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Care Guide Tabs
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-            
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    tabButtons.forEach(btn => btn.classList.remove('tab-active'));
-                    
-                    // Add active class to clicked button
-                    button.classList.add('tab-active');
-                    
-                    // Hide all tab contents
-                    tabContents.forEach(content => content.classList.add('hidden'));
-                    
-                    // Show the selected tab content
-                    const tabId = button.getAttribute('data-tab');
-                    document.getElementById(`${tabId}-content`).classList.remove('hidden');
-                });
-            });
-        });
-    </script>
-
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Tab functionality
